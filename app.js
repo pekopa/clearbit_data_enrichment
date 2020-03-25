@@ -1,10 +1,11 @@
 const clearbit = require('clearbit')(process.env.CLEARBIT_API_KEY);
 const flatten = require('flat');
-const companyFields = require('./objects_keys/company_keys');
-const personFields = require('./objects_keys/person_keys');
 const XLSX = require('xlsx');
 const dotenv = require('dotenv');
 dotenv.config();
+
+const companyFields = require('./objects_keys/company_keys');
+const personFields = require('./objects_keys/person_keys');
 
 const EMAILS_FILE = 'data.xlsx'; // File that contains emails
 const OUTPUT_FILE = 'enriched.xlsb'; // Enriched file to write to
